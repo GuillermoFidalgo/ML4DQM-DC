@@ -124,9 +124,11 @@ def isgolden(run, lumi):
     #jsonloc2017 = '/eos/project/c/cmsml4dc/ML_2020/Scripts2020/GoldenJSON17.json'
     #jsonloc2018 = 'goldenJSON2018.json' # temporary and manually copied from twiki, removed now.
     # new golden jsons (rereco)
-    jsonloc2017 = '/eos/home-l/llambrec/SWAN_projects/ML4DQM-DC/utils/json_GOLDEN_2017.txt' 
+    jsonloc2017 = '/eos/user/g/gfidalgo/OMS API/ML4DQM-DC/utils/json_GOLDEN_2017.txt'
+    #'/eos/home-l/llambrec/SWAN_projects/ML4DQM-DC/utils/json_GOLDEN_2017.txt' 
     # ultralegacy reprocessing; from: /afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions17/13TeV/Legacy_2017/Cert_294927-306462_13TeV_UL2017_Collisions17_GoldenJSON.txt
-    jsonloc2018 = '/eos/home-l/llambrec/SWAN_projects/ML4DQM-DC/utils/json_GOLDEN_2018.txt'
+    jsonloc2018 = '/eos/user/g/gfidalgo/OMS API/ML4DQM-DC/utils/json_GOLDEN_2018.txt'
+    #'/eos/home-l/llambrec/SWAN_projects/ML4DQM-DC/utils/json_GOLDEN_2018.txt'
     # legacy reprocessing; from: /afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions18/13TeV/Legacy_2018/Cert_314472-325175_13TeV_Legacy2018_Collisions18_JSON.txt
     
     return injson(run,lumi,jsonfile=jsonloc2017) + injson(run,lumi,jsonfile=jsonloc2018)
@@ -137,9 +139,11 @@ def isdcson(run, lumi):
     # input arguments:
     # - run and lumi: either integers or (equally long) arrays of integers
     
-    jsonloc2017 = '/eos/home-l/llambrec/SWAN_projects/ML4DQM-DC/utils/json_DCSONLY_2017.txt'
+    jsonloc2017 = '/eos/user/g/gfidalgo/OMS API/ML4DQM-DC/utils/json_DCSONLY_2017.txt'
+    # from: '/eos/home-l/llambrec/SWAN_projects/ML4DQM-DC/utils/json_DCSONLY_2017.txt'
     # from: /afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions17/13TeV/DCSOnly/json_DCSONLY.txt
-    jsonloc2018 = '/eos/home-l/llambrec/SWAN_projects/ML4DQM-DC/utils/json_DCSONLY_2018.txt'
+    jsonloc2018 = '/eos/user/g/gfidalgo/OMS API/ML4DQM-DC/utils/json_DCSONLY_2018.txt'
+    # from: '/eos/home-l/llambrec/SWAN_projects/ML4DQM-DC/utils/json_DCSONLY_2018.txt'
     # from: /afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions18/13TeV/DCSOnly/json_DCSONLY.txt
     return injson(run,lumi,jsonfile=jsonloc2017) + injson(run,lumi,jsonfile=jsonloc2018)
 
@@ -148,7 +152,8 @@ def ispixelgood(run, lumi):
     ### find if a run and lumi combination is in the json with good pixel flag
     # note: this json was custom generated in run regisitry and not official!
     
-    jsonloc2017 = '/eos/home-l/llambrec/SWAN_projects/ML4DQM-DC/utils/json_pixel_good_201201.json'
+    jsonloc2017 = "/eos/user/g/gfidalgo/OMS API/ML4DQM-DC/utils/json_pixel_good_201201.json"
+    #'/eos/home-l/llambrec/SWAN_projects/ML4DQM-DC/utils/json_pixel_good_201201.json'
     jsonloc2018 = None
     return injson(run,lumi,jsonfile=jsonloc2017)
 
@@ -158,7 +163,8 @@ def ispixelbad(run, lumi):
     # note: this json was custom generated in run registry and not official!
     # note: not simply the negation of ispixelgood! json has more relaxed conditions on DCS-like criteria.
     
-    jsonloc2017 = '/eos/home-l/llambrec/SWAN_projects/ML4DQM-DC/utils/json_pixel_bad_201201.json'
+    jsonloc2017 = '/eos/user/g/gfidalgo/OMS API/ML4DQM-DC/utils/json_pixel_bad_201201.json'
+    #'/eos/home-l/llambrec/SWAN_projects/ML4DQM-DC/utils/json_pixel_bad_201201.json'
     jsonloc2018 = None
     return injson(run,lumi,jsonfile=jsonloc2017)
 
