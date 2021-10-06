@@ -58,6 +58,7 @@ def get_oms_api():
 
 
 def get_oms_data( omsapi, api_endpoint, runnb, extrafilters=[], extraargs={}, sort=None, attributes=[], limit_entries=1000):
+    """
     ### query some data from OMS
     # input arguments:
     # - omsapi: an OMSAPI instance, e.g. created by get_oms_api()
@@ -74,7 +75,7 @@ def get_oms_data( omsapi, api_endpoint, runnb, extrafilters=[], extraargs={}, so
     # - sort: valid field name in the OMS data by which to sort
     # - attributes: list of valid field names in the OMS data to return (if not specified, all information is returned)
     # - limit_entries: entry limit for output json object
-    
+    """
     filters = []
     
     # check omsapi argument
